@@ -52,26 +52,10 @@ body{min-height:100vh}
 
 /* KPI ROW */
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:20px}
-.recognition-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
-.rec-card{position:relative;border-radius:var(--radius);padding:18px 20px;border:1.5px solid var(--border);overflow:hidden}
-.rec-card.gold{background:linear-gradient(135deg,#fdf6e3,#fcefc7);border-color:#d4af37}
-.rec-card.improved{background:linear-gradient(135deg,#eaf5ee,#dcefe3);border-color:var(--green-border)}
-.rec-card .rec-label{display:flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);margin-bottom:10px}
-.rec-card .rec-icon{font-size:15px;line-height:1}
-.rec-card .rec-name{font-size:21px;font-weight:800;color:var(--text);margin-bottom:3px}
-.rec-card .rec-sub{font-size:12px;color:var(--text2);margin-bottom:12px}
-.rec-card .rec-stats{display:flex;gap:16px;flex-wrap:wrap}
-.rec-card .rec-stat{font-family:'JetBrains Mono',monospace}
-.rec-card .rec-stat .v{font-size:16px;font-weight:800}
-.rec-card .rec-stat .l{font-size:9.5px;color:var(--text3);text-transform:uppercase;letter-spacing:.04em;display:block;margin-top:1px}
-.rec-card.gold .rec-stat .v{color:#8a6d1a}
-.rec-card.improved .rec-stat .v{color:var(--green)}
-.rec-card .rec-badge{position:absolute;top:14px;right:16px;font-size:26px}
-.rec-empty{font-size:12px;color:var(--text3);font-style:italic}
 .kpi{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;position:relative;overflow:hidden;transition:border-color .15s}
 .kpi:hover{border-color:var(--border2)}
 .kpi .label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);font-weight:500;margin-bottom:8px}
-.kpi .value{font-size:36px;font-weight:700;letter-spacing:-.03em;line-height:1;color:var(--mcgreen-dark)}
+.kpi .value{font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--mcgreen-dark)}
 .kpi .sub{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--text3);margin-top:6px}
 .kpi.red{border-color:var(--red-border);background:var(--red-dim)}
 .kpi.red .value{color:var(--red)}
@@ -124,17 +108,14 @@ tbody tr:last-child td{border-bottom:none}
 .desc-cell .note{font-size:11px;color:var(--text3);margin-top:4px;padding-top:4px;border-top:1px solid var(--border);font-style:italic}
 
 /* BADGES & TAGS */
-.tag{display:inline-block;padding:3px 9px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.03em;border-radius:5px;white-space:nowrap}
-.tag.red{background:var(--red-dim);color:var(--red);border:1.5px solid var(--red-border)}
-.tag.amber{background:var(--amber-dim);color:var(--amber);border:1.5px solid var(--amber-border)}
-.tag.green{background:var(--green-dim);color:var(--green);border:1.5px solid var(--green-border)}
-.tag.blue{background:var(--blue-dim);color:var(--blue);border:1.5px solid var(--blue-border)}
-.tag.neutral{background:var(--card2);color:var(--text2);border:1.5px solid var(--border)}
-.tag.age{font-size:13px;font-weight:800;padding:4px 10px;min-width:42px;text-align:center}
-.tag.age.red{background:var(--red);color:#fff;border-color:var(--red)}
-.tag.age.amber{background:var(--amber);color:#fff;border-color:var(--amber)}
-.tag.age.blue{background:var(--blue);color:#fff;border-color:var(--blue)}
-.tag.age.neutral{background:var(--text2);color:#fff;border-color:var(--text2)}
+.tag{display:inline-block;padding:2px 7px;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.04em;border-radius:4px;white-space:nowrap}
+.tag.red{background:var(--red-dim);color:var(--red);border:1px solid var(--red-border)}
+.tag.amber{background:var(--amber-dim);color:var(--amber);border:1px solid var(--amber-border)}
+.tag.green{background:var(--green-dim);color:var(--green);border:1px solid var(--green-border)}
+.tag.blue{background:var(--blue-dim);color:var(--blue);border:1px solid var(--blue-border)}
+.tag.neutral{background:var(--card2);color:var(--text2);border:1px solid var(--border)}
+.tag.age-tag{font-size:14px;font-weight:800;padding:3px 9px;letter-spacing:.01em}
+.age-cell-plain{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:800;color:var(--text);font-variant-numeric:tabular-nums}
 .badge{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:4px;white-space:nowrap}
 .badge.overdue{background:var(--red);color:#fff}
 .badge.overdue::before{content:"\25CF";font-size:6px}
@@ -153,18 +134,13 @@ tbody tr:last-child td{border-bottom:none}
 /* OWNER GROUP */
 .owner-group{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:12px}
 .owner-group-head{padding:10px 16px;background:var(--mcgreen);display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);cursor:pointer;user-select:none}
-.owner-group.collapsed .owner-group-head{border-bottom:none}
-.owner-group-head h4{font-size:14px;font-weight:600;color:#fff;display:flex;align-items:center;gap:8px;margin:0}
-.owner-group-head .chevron{display:inline-block;width:10px;height:10px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(45deg);transition:transform .15s ease;flex:none}
-.owner-group.collapsed .chevron{transform:rotate(-45deg)}
+.owner-group-head h4{font-size:14px;font-weight:600;color:#fff;display:flex;align-items:center;gap:8px}
+.owner-group-head .chevron{display:inline-block;transition:transform .2s ease;font-size:12px;color:rgba(255,255,255,.7)}
+.owner-group.collapsed .chevron{transform:rotate(-90deg)}
+.owner-group .owner-body{transition:none}
+.owner-group.collapsed .owner-body{display:none}
 .owner-group-head .badges{display:flex;gap:8px;align-items:center}
 .owner-group-head .ct-badge{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.06em;padding:2px 7px;border-radius:4px}
-.owner-group-body{overflow:hidden}
-.owner-group.collapsed .owner-group-body{display:none}
-.flagged-toolbar{display:flex;justify-content:flex-end;margin-bottom:12px}
-.download-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:var(--radius);border:1px solid var(--border);background:var(--mcgreen);color:#fff;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit}
-.download-btn:hover{background:var(--mcgreen-dark)}
-.download-btn svg{width:13px;height:13px}
 
 /* DONUT */
 .donut-wrap{position:relative;width:140px;height:140px;flex-shrink:0}
@@ -177,26 +153,84 @@ tbody tr:last-child td{border-bottom:none}
 .legend-row .cnt{font-family:'JetBrains Mono',monospace;font-weight:600;margin-left:auto;font-size:12px;font-variant-numeric:tabular-nums}
 
 /* AVG AGE BARS */
-.age-owner-row{display:grid;grid-template-columns:minmax(0,150px) 1fr 130px;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--border)}
+.age-owner-row{display:grid;grid-template-columns:minmax(0,160px) 1fr 80px;gap:14px;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)}
 .age-owner-row:last-child{border-bottom:none}
-.age-owner-name{font-size:13px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:7px}
-.rank-badge{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:800;flex:none;background:var(--card2);color:var(--text2);border:1px solid var(--border)}
-.rank-badge.rank-1{background:#fdf0c8;color:#8a6d1a;border-color:#d4af37}
-.rank-badge.rank-2{background:#e8ecef;color:#5a6570;border-color:#b8c2cc}
-.rank-badge.rank-3{background:#f3e3d3;color:#8a5a2e;border-color:#c89b6e}
+.age-owner-name{font-size:13px;font-weight:600;color:var(--text)}
 .age-owner-ct{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3)}
-.age-owner-val{text-align:right;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:26px;font-variant-numeric:tabular-nums;line-height:1}
-.age-owner-val .unit{font-size:12px;font-weight:500;color:var(--text3);margin-left:2px}
-.age-owner-detail{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);text-align:right;margin-top:4px}
-.age-owner-wow{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;padding:2px 7px;border-radius:5px;margin-top:5px}
+.age-owner-val{text-align:right;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:22px;font-variant-numeric:tabular-nums}
+.age-owner-val .unit{font-size:10px;font-weight:400;color:var(--text3);margin-left:2px}
+.age-owner-detail{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--text3);text-align:right}
+
+/* RANKINGS TAB */
+.rank-hero{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.hero-card{border-radius:var(--radius);padding:18px 20px;position:relative;overflow:hidden;border:1px solid var(--border)}
+.hero-card.winner{background:linear-gradient(135deg,var(--mcgreen-dark),var(--mcgreen));border-color:var(--mcgreen-dark);color:#fff}
+.hero-card.improved{background:var(--mcyellow-light);border-color:var(--mcyellow)}
+.hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.hero-card.winner .hero-eyebrow{color:var(--mcyellow)}
+.hero-card.improved .hero-eyebrow{color:var(--mcyellow-dark)}
+.hero-medal{font-size:18px;line-height:1}
+.hero-name{font-size:26px;font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-bottom:4px}
+.hero-card.improved .hero-name{color:var(--mcgreen-dark)}
+.hero-sub{font-size:12.5px;opacity:.85}
+.hero-card.winner .hero-sub{color:rgba(255,255,255,.8)}
+.hero-card.improved .hero-sub{color:var(--text2)}
+.hero-score{position:absolute;top:16px;right:20px;text-align:right}
+.hero-score .n{font-family:'JetBrains Mono',monospace;font-size:34px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.hero-score .l{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:2px}
+.hero-stats{display:flex;gap:18px;margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.18)}
+.hero-card.improved .hero-stats{border-top-color:var(--mcyellow)}
+.hero-stat{font-family:'JetBrains Mono',monospace}
+.hero-stat .v{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums}
+.hero-stat .k{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;opacity:.7;margin-top:2px}
+.rank-num{font-family:'JetBrains Mono',monospace;font-weight:800;font-size:15px;font-variant-numeric:tabular-nums;width:24px;text-align:center;color:var(--text2)}
+.rank-num.r1{color:var(--mcgreen)}
+.score-cell{display:flex;align-items:center;gap:8px}
+.score-bar{height:8px;border-radius:4px;background:var(--card2);overflow:hidden;flex:1;min-width:60px;max-width:120px}
+.score-bar > div{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--mcgreen-dark),var(--mcgreen))}
+.score-val{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;font-variant-numeric:tabular-nums;width:40px;text-align:right}
+.delta{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;font-variant-numeric:tabular-nums}
+.delta.up{color:var(--green)}
+.delta.down{color:var(--red)}
+.delta.flat{color:var(--text3)}
+.spark-cell svg{display:block}
+.method-note{background:var(--card2);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.6}
+.method-note b{color:var(--mcgreen-dark)}
+.method-note .pill{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--mcgreen-light);color:var(--mcgreen-dark);padding:1px 7px;border-radius:4px;margin:0 2px;font-weight:600}
+@media(max-width:700px){.rank-hero{grid-template-columns:1fr}}
+
+/* JUNE RECAP TAB */
+.recap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.trend-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;box-shadow:0 1px 4px rgba(26,43,31,.06)}
+.trend-card .tc-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);font-weight:500;margin-bottom:8px}
+.trend-card .tc-val{font-size:30px;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--mcgreen-dark)}
+.trend-card .tc-val .u{font-size:14px;font-weight:400;color:var(--text3);margin-left:2px}
+.trend-dir{display:inline-flex;align-items:center;gap:5px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;margin-top:8px;padding:2px 8px;border-radius:5px}
+.trend-dir.good{background:var(--green-dim);color:var(--green)}
+.trend-dir.bad{background:var(--red-dim);color:var(--red)}
+.trend-dir.neutral{background:var(--card2);color:var(--text2)}
+.trend-dir .since{font-weight:400;color:var(--text3);margin-left:2px}
+.tc-spark{margin-top:12px}
+.recap-grid.big{grid-template-columns:repeat(2,1fr)}
+.recap-grid.big .trend-card{padding:18px 20px 16px}
+.recap-grid.big .tc-spark{margin-top:14px}
+.recap-grid.big .tc-spark svg{overflow:visible}
+@media(max-width:900px){.recap-grid.big{grid-template-columns:1fr}}
+.tc-verdict{font-size:11.5px;color:var(--text2);line-height:1.5;margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+.month-lb td .traj{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600}
+.crown{font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;color:var(--mcyellow-dark);background:var(--mcyellow-light);border:1px solid var(--mcyellow);padding:1px 6px;border-radius:4px;margin-left:6px;text-transform:uppercase}
+@media(max-width:1100px){.recap-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.recap-grid{grid-template-columns:1fr}}
 
 @media(max-width:1100px){.r2,.r3,.r23,.r32{grid-template-columns:1fr} .kpis{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:600px){.kpis{grid-template-columns:repeat(2,1fr)} .topbar{flex-direction:column;gap:8px;align-items:flex-start} .topbar .meta{flex-wrap:wrap}}
 
-.trend-badge{display:inline-flex;align-items:center;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;margin-left:4px}
-.trend-badge.gold{background:#fdf0c8;color:#8a6d1a;border:1px solid #d4af37}
-.trend-badge.silver{background:#e8ecef;color:#5a6570;border:1px solid #b8c2cc}
-.trend-badge.bronze{background:#f3e3d3;color:#8a5a2e;border:1px solid #c89b6e}
+
+
+
+
+
+
 </style>
 </head>
 <body>
@@ -210,7 +244,7 @@ tbody tr:last-child td{border-bottom:none}
   <div class="meta">
     <span><b id="tb-total"></b> open WOs</span>
     <span><b id="tb-flagged" style="color:var(--red)"></b> flagged</span>
-    <span>Outside vendors only</span>
+    <span>Facility Team</span>
   </div>
   <div class="live">Live</div>
 </div>
@@ -218,18 +252,16 @@ tbody tr:last-child td{border-bottom:none}
 <!-- TABS -->
 <div class="tabs" id="tabs">
   <div class="tab active" data-tab="overview">Overview</div>
-  <div class="tab" data-tab="trends">📅 Last 30 Days</div>
+  <div class="tab" data-tab="rankings">WOW Rankings</div>
+  <div class="tab" data-tab="recap">Last 30 Days</div>
+  <div class="tab" data-tab="trend90">90-Day Trend</div>
   <div class="tab" data-tab="flagged">Flagged<span class="ct" id="tab-flag-ct"></span></div>
   <div class="tab" data-tab="stale">Stale 30+<span class="ct" id="tab-stale-ct"></span></div>
-  <div class="tab" data-tab="composition">Composition</div>
-  <div class="tab" data-tab="vendors">Vendors</div>
-  <div class="tab" data-tab="followups">Follow-Ups</div>
   <div class="tab" data-tab="register">Full Register</div>
 </div>
 
 <!-- ==================== OVERVIEW ==================== -->
 <div class="page active" id="page-overview">
-  <div class="recognition-row" id="recognitionRow"></div>
   <div class="kpis" id="kpis"></div>
   <div class="row r2">
     <div class="card"><div class="card-head"><h3>Aging Distribution</h3><div class="hint">Days in status</div></div><div class="card-body" id="ageBars"></div></div>
@@ -242,7 +274,7 @@ tbody tr:last-child td{border-bottom:none}
   </div>
   <div class="row r2">
     <div class="card"><div class="card-head"><h3>Owner Volume</h3><div class="hint">Open WO count</div></div><div class="card-body" id="ownerBars"></div></div>
-    <div class="card"><div class="card-head"><h3>Avg Age by Owner</h3><div class="hint">Ranked · Days · vs prior week</div></div><div class="card-body" id="ownerAgeBars"></div></div>
+    <div class="card"><div class="card-head"><h3>Avg Age by Owner</h3><div class="hint">Days · sorted highest first</div></div><div class="card-body" id="ownerAgeBars"></div></div>
   </div>
 </div>
 
@@ -253,50 +285,22 @@ tbody tr:last-child td{border-bottom:none}
     <div class="kpi red"><div class="label">Past Follow-Up Date</div><div class="value" id="f-overdue"></div><div class="sub">Committed date passed</div></div>
     <div class="kpi amber"><div class="label">No Follow-Up Set</div><div class="value" id="f-nofu"></div><div class="sub">14+ days, no date</div></div>
   </div>
-  <div style="display:flex;gap:14px;margin-bottom:16px;flex-wrap:wrap">
-    <div style="display:flex;align-items:center;gap:6px"><span class="badge overdue">Overdue</span><span style="font-size:12px;color:var(--text3)">Follow-up date passed</span></div>
-    <div style="display:flex;align-items:center;gap:6px"><span class="badge no-fu">No follow-up</span><span style="font-size:12px;color:var(--text3)">8+ days, no date set</span></div>
-  </div>
-  <div class="flagged-toolbar">
-    <button class="download-btn" id="downloadFlagged" type="button">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Download CSV
-    </button>
+  <div style="display:flex;gap:14px;margin-bottom:16px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:6px"><span class="badge overdue">Overdue</span><span style="font-size:12px;color:var(--text3)">Follow-up date passed, 7+ days</span></div>
+      <div style="display:flex;align-items:center;gap:6px"><span class="badge no-fu">No follow-up</span><span style="font-size:12px;color:var(--text3)">7+ days, no date set</span></div>
+    </div>
+    <button id="downloadFlagged" style="display:flex;align-items:center;gap:6px;padding:7px 14px;background:var(--mcgreen-dark);color:#fff;border:none;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;cursor:pointer">⬇ Download CSV</button>
   </div>
   <div id="flaggedByOwner"></div>
 </div>
 
 <!-- ==================== STALE ==================== -->
 <div class="page" id="page-stale">
-  <div class="flagged-toolbar">
-    <button class="download-btn" id="downloadStale" type="button">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Download CSV
-    </button>
+  <div style="display:flex;justify-content:flex-end;margin-bottom:12px">
+    <button id="downloadStale" style="display:flex;align-items:center;gap:6px;padding:7px 14px;background:var(--mcgreen-dark);color:#fff;border:none;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;cursor:pointer">⬇ Download CSV</button>
   </div>
   <div class="card"><div class="card-head"><h3>Work Orders 30+ Days</h3><div class="hint" id="staleCt"></div></div><div class="tbl-wrap"><div class="tbl-scroll"><table id="staleTbl"><thead><tr><th>Age</th><th>WO #</th><th>Class</th><th>Store</th><th>Category</th><th>Vendor</th><th>Owner</th><th>Description</th></tr></thead><tbody></tbody></table></div></div></div>
-</div>
-
-<!-- ==================== COMPOSITION ==================== -->
-<div class="page" id="page-composition">
-  <div class="row r2">
-    <div class="card"><div class="card-head"><h3>All Categories</h3><div class="hint">Mid-level path</div></div><div class="card-body" id="catBarsFull"></div></div>
-    <div class="card"><div class="card-head"><h3>All Locations</h3><div class="hint">By open count</div></div><div class="card-body"><div class="tbl-wrap"><div class="tbl-scroll" style="max-height:420px"><table id="locTbl"><thead><tr><th>Store</th><th class="r">Open</th><th class="r">Avg age</th><th class="r">Oldest</th></tr></thead><tbody></tbody></table></div></div></div></div>
-  </div>
-  <div class="row r2">
-    <div class="card"><div class="card-head"><h3>Owner Volume</h3><div class="hint">Count + stale</div></div><div class="card-body" id="ownerBarsFull"></div></div>
-    <div class="card"><div class="card-head"><h3>Avg Age by Owner</h3><div class="hint">Median · Max</div></div><div class="card-body" id="ownerAgeBarsFull"></div></div>
-  </div>
-</div>
-
-<!-- ==================== VENDORS ==================== -->
-<div class="page" id="page-vendors">
-  <div class="card"><div class="card-head"><h3>Vendor Detail</h3><div class="hint">Outside vendors only · comma-split</div></div><div class="tbl-wrap"><div class="tbl-scroll"><table id="vendorTbl"><thead><tr><th>Vendor</th><th class="r">Open WOs</th><th class="r">Share</th><th class="r">Avg Age</th><th class="r">Oldest</th></tr></thead><tbody></tbody></table></div></div></div>
-</div>
-
-<!-- ==================== FOLLOW-UPS ==================== -->
-<div class="page" id="page-followups">
-  <div class="card"><div class="card-head"><h3>Scheduled Follow-Ups</h3><div class="hint" id="fuCt"></div></div><div class="tbl-wrap"><div class="tbl-scroll"><table id="fuTbl"><thead><tr><th>Date</th><th>WO #</th><th>Age</th><th>Store</th><th>Vendor</th><th>Reason</th></tr></thead><tbody></tbody></table></div></div></div>
 </div>
 
 <!-- ==================== FULL REGISTER ==================== -->
@@ -311,9 +315,32 @@ tbody tr:last-child td{border-bottom:none}
   <div class="card"><div class="tbl-wrap"><div class="tbl-scroll" style="max-height:640px"><table id="allTbl"><thead><tr><th>WO #</th><th>Class</th><th>Age</th><th>Created</th><th>Store</th><th>Category</th><th>Vendor</th><th>Owner</th><th>Follow-up</th><th>Description</th></tr></thead><tbody></tbody></table></div></div></div>
 </div>
 
-<!-- ==================== JUNE TRENDS ==================== -->
-<div class="page" id="page-trends">
-  <div id="trendsContent"></div>
+<!-- ==================== WOW RANKINGS ==================== -->
+<div class="page" id="page-rankings">
+  <div class="rank-hero" id="rankHero"></div>
+  <div class="row r2">
+    <div class="card"><div class="card-head"><h3>Weekly Leaderboard</h3><div class="hint">Score · rank change vs last week</div></div><div class="tbl-wrap"><table id="leaderTbl"><thead><tr><th>#</th><th>Owner</th><th>Composite Score</th><th>Δ wk</th><th class="r">Flagged</th><th class="r">30+</th><th class="r">Avg Age</th><th class="r">WOs</th></tr></thead><tbody></tbody></table></div></div>
+    <div class="card"><div class="card-head"><h3>Score Trend</h3><div class="hint" id="trendTblHint">Last weeks</div></div><div class="card-body"><div class="tbl-wrap"><table id="trendTbl"><thead><tr id="trendTblHead"></tr></thead><tbody></tbody></table></div></div></div>
+  </div>
+  <div class="method-note" id="methodNote"></div>
+</div>
+
+<!-- ==================== ROLLING 30-DAY RECAP ==================== -->
+<div class="page" id="page-recap">
+  <div style="margin-bottom:14px;font-size:12.5px;color:var(--text2)" id="recapIntro"></div>
+  <div class="recap-grid big" id="recapTrends"></div>
+  <div class="rank-hero" id="recapHero"></div>
+  <div class="card"><div class="card-head"><h3>Last 30 Days Leaderboard</h3><div class="hint" id="recapLbHint"></div></div><div class="tbl-wrap"><table class="month-lb" id="monthLbTbl"><thead><tr id="monthLbHead"></tr></thead><tbody></tbody></table></div></div>
+  <div class="method-note" id="recapNote" style="margin-top:12px"></div>
+</div>
+
+<!-- ==================== ROLLING 90-DAY TREND ==================== -->
+<div class="page" id="page-trend90">
+  <div style="margin-bottom:14px;font-size:12.5px;color:var(--text2)" id="trend90Intro"></div>
+  <div class="recap-grid big" id="trend90Trends"></div>
+  <div class="rank-hero" id="trend90Hero"></div>
+  <div class="card"><div class="card-head"><h3>90-Day Leaderboard</h3><div class="hint" id="trend90LbHint"></div></div><div class="tbl-wrap"><table class="month-lb" id="trend90LbTbl"><thead><tr><th>#</th><th>Owner</th><th>90-Day Avg</th><th>First &rarr; Latest</th><th>Trajectory</th><th class="r">90-Day &Delta;</th></tr></thead><tbody></tbody></table></div></div>
+  <div class="method-note" id="trend90Note" style="margin-top:12px"></div>
 </div>
 
 <script>
@@ -324,6 +351,15 @@ const fmt = n => Number(n).toLocaleString();
 const esc = s => String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const pct = (n, d) => d ? Math.round(n / d * 1000) / 10 : 0;
 const k = data.kpis;
+
+// ==================== LAST 30 DAYS TRENDS ====================
+// snapshots holds one entry per published weekly dashboard. Each week, append this
+// week's snapshot here (data.kpis + data.assignees + per-owner flagged counts).
+// renderTrends() below filters to a rolling 30-day window from TODAY and computes
+// composite scores dynamically, so this list can just keep growing week over week
+// without needing any hand-computed "monthly" summary.
+const trendData = {"snapshots":[{"date":"2026-05-25","label":"05-25","total":505,"avgAge":32.6,"repairAvgAge":17.6,"pmAvgAge":36.2,"over30":384,"over60":2,"repair":98,"pm":406,"owners":[{"name":"Greg Wallace","count":52,"avgAge":20.0,"flagged":30,"flagRate":57.7},{"name":"Carlos Garcia","count":2,"avgAge":26.5,"flagged":2,"flagRate":100.0},{"name":"Leeland Weiss","count":1,"avgAge":13.0,"flagged":0,"flagRate":0.0},{"name":"Steven McCormick","count":1,"avgAge":12.0,"flagged":0,"flagRate":0.0}]},{"date":"2026-06-02","label":"06-02","total":516,"avgAge":37.6,"repairAvgAge":18.2,"pmAvgAge":43.6,"over30":403,"over60":2,"repair":106,"pm":401,"owners":[{"name":"Norma Torres","count":90,"avgAge":47.0,"flagged":10,"flagRate":11.1},{"name":"Leeland Weiss","count":90,"avgAge":46.7,"flagged":28,"flagRate":31.1},{"name":"Greg Wallace","count":85,"avgAge":36.0,"flagged":41,"flagRate":48.2},{"name":"Steven McCormick","count":68,"avgAge":45.6,"flagged":14,"flagRate":20.6},{"name":"Carlos Garcia","count":2,"avgAge":34.5,"flagged":2,"flagRate":100.0},{"name":"Kyle Miller","count":1,"avgAge":5.0,"flagged":0,"flagRate":0.0}]},{"date":"2026-06-08","label":"06-08","total":433,"avgAge":43.4,"repairAvgAge":20.1,"pmAvgAge":51.1,"over30":345,"over60":2,"repair":102,"pm":327,"owners":[{"name":"Norma Torres","count":87,"avgAge":50.7,"flagged":38,"flagRate":43.7},{"name":"Leeland Weiss","count":85,"avgAge":51.5,"flagged":20,"flagRate":23.5},{"name":"Greg Wallace","count":83,"avgAge":40.2,"flagged":49,"flagRate":59.0},{"name":"Steven McCormick","count":66,"avgAge":48.5,"flagged":0,"flagRate":0.0},{"name":"Carlos Garcia","count":2,"avgAge":41.0,"flagged":0,"flagRate":0.0},{"name":"Kyle Miller","count":1,"avgAge":11.0,"flagged":0,"flagRate":0.0}]},{"date":"2026-06-15","label":"06-15","total":353,"avgAge":41.2,"repairAvgAge":19.1,"pmAvgAge":53.2,"over30":238,"over60":203,"repair":116,"pm":231,"owners":[{"name":"Greg Wallace","count":90,"avgAge":35.9,"flagged":36,"flagRate":40.0},{"name":"Norma Torres","count":77,"avgAge":43.8,"flagged":42,"flagRate":54.5},{"name":"Leeland Weiss","count":62,"avgAge":53.4,"flagged":33,"flagRate":53.2},{"name":"Steven McCormick","count":57,"avgAge":49.7,"flagged":36,"flagRate":63.2},{"name":"Carlos Garcia","count":3,"avgAge":32.7,"flagged":0,"flagRate":0.0},{"name":"Kyle Miller","count":1,"avgAge":18.0,"flagged":1,"flagRate":100.0}]},{"date":"2026-06-23","label":"06-23","total":357,"avgAge":34.0,"repairAvgAge":20.3,"pmAvgAge":42.0,"over30":166,"over60":135,"repair":128,"pm":226,"owners":[{"name":"Greg Wallace","count":117,"avgAge":27.3,"flagged":48,"flagRate":41.0},{"name":"Steven McCormick","count":73,"avgAge":46.7,"flagged":7,"flagRate":9.6},{"name":"Leeland Weiss","count":64,"avgAge":38.4,"flagged":5,"flagRate":7.8},{"name":"Carlos Garcia","count":51,"avgAge":8.5,"flagged":0,"flagRate":0.0},{"name":"Norma Torres","count":50,"avgAge":52.2,"flagged":44,"flagRate":88.0},{"name":"Kyle Miller","count":2,"avgAge":13.0,"flagged":1,"flagRate":50.0}]},{"date":"2026-06-29","label":"06-29","total":302,"avgAge":37.1,"repairAvgAge":21.6,"pmAvgAge":48.6,"over30":136,"over60":105,"repair":127,"pm":173,"owners":[{"name":"Greg Wallace","count":106,"avgAge":30.3,"flagged":73,"flagRate":68.9},{"name":"Steven McCormick","count":61,"avgAge":52.0,"flagged":23,"flagRate":37.7},{"name":"Carlos Garcia","count":50,"avgAge":9.8,"flagged":23,"flagRate":46.0},{"name":"Leeland Weiss","count":43,"avgAge":47.9,"flagged":14,"flagRate":32.6},{"name":"Norma Torres","count":40,"avgAge":55.6,"flagged":36,"flagRate":90.0},{"name":"Kyle Miller","count":2,"avgAge":19.0,"flagged":1,"flagRate":50.0}]},{"date":"2026-07-09","label":"07-09","total":220,"avgAge":35.4,"repairAvgAge":21.5,"pmAvgAge":57.1,"over30":85,"over60":69,"repair":121,"pm":89,"owners":[{"name":"Greg Wallace","count":97,"avgAge":27.1,"flagged":76,"flagRate":78.4},{"name":"Steven McCormick","count":51,"avgAge":59.9,"flagged":19,"flagRate":37.3},{"name":"Leeland Weiss","count":31,"avgAge":31.0,"flagged":16,"flagRate":51.6},{"name":"Carlos Garcia","count":20,"avgAge":12.4,"flagged":10,"flagRate":50.0},{"name":"Norma Torres","count":20,"avgAge":43.8,"flagged":20,"flagRate":100.0},{"name":"Kyle Miller","count":1,"avgAge":16.0,"flagged":1,"flagRate":100.0}]},{"date":"2026-07-22","label":"07-22","total":201,"avgAge":25.7,"repairAvgAge":21.0,"pmAvgAge":35.1,"over30":60,"over60":33,"repair":122,"pm":68,"owners":[{"name":"Greg Wallace","count":85,"avgAge":31.0,"flagged":60,"flagRate":70.6},{"name":"Steven McCormick","count":45,"avgAge":17.3,"flagged":9,"flagRate":20.0},{"name":"Leeland Weiss","count":32,"avgAge":24.9,"flagged":2,"flagRate":6.2},{"name":"Norma Torres","count":26,"avgAge":32.1,"flagged":14,"flagRate":53.8},{"name":"Carlos Garcia","count":13,"avgAge":8.8,"flagged":3,"flagRate":23.1}]},{"date":"2026-07-27","label":"07-27","total":222,"avgAge":26.3,"repairAvgAge":20.3,"pmAvgAge":40.1,"over30":59,"over60":33,"repair":145,"pm":66,"owners":[{"name":"Greg Wallace","count":93,"avgAge":31.6,"flagged":72,"flagRate":77.4},{"name":"Steven McCormick","count":48,"avgAge":19.1,"flagged":17,"flagRate":35.4},{"name":"Norma Torres","count":30,"avgAge":32.3,"flagged":17,"flagRate":56.7},{"name":"Leeland Weiss","count":28,"avgAge":31.6,"flagged":6,"flagRate":21.4},{"name":"Carlos Garcia","count":23,"avgAge":6.0,"flagged":4,"flagRate":17.4}]},{"date":"2026-08-03","label":"08-03","total":239,"avgAge":27.3,"repairAvgAge":22.2,"pmAvgAge":44.2,"over30":72,"over60":32,"repair":158,"pm":63,"owners":[{"name":"Greg Wallace","count":111,"avgAge":29.9,"flagged":68,"flagRate":61.3},{"name":"Steven McCormick","count":47,"avgAge":21.2,"flagged":33,"flagRate":70.2},{"name":"Leeland Weiss","count":31,"avgAge":33.0,"flagged":11,"flagRate":35.5},{"name":"Carlos Garcia","count":26,"avgAge":9.2,"flagged":9,"flagRate":34.6},{"name":"Norma Torres","count":24,"avgAge":40.0,"flagged":18,"flagRate":75.0}]},{"date":"2026-08-11","label":"08-11","total":200,"avgAge":30.2,"repairAvgAge":25.2,"pmAvgAge":52.2,"over30":62,"over60":31,"repair":147,"pm":40,"owners":[{"name":"Greg Wallace","count":110,"avgAge":28.1,"flagged":69,"flagRate":62.7},{"name":"Steven McCormick","count":34,"avgAge":26.6,"flagged":29,"flagRate":85.3},{"name":"Leeland Weiss","count":25,"avgAge":37.7,"flagged":9,"flagRate":36.0},{"name":"Norma Torres","count":17,"avgAge":52.5,"flagged":17,"flagRate":100.0},{"name":"Carlos Garcia","count":14,"avgAge":14.9,"flagged":8,"flagRate":57.1}]},{"date":"2026-08-17","label":"08-17","total":199,"avgAge":30.8,"repairAvgAge":27.4,"pmAvgAge":42.8,"over30":62,"over60":33,"repair":139,"pm":47,"owners":[{"name":"Greg Wallace","count":92,"avgAge":32.2,"flagged":62,"flagRate":67.4},{"name":"Steven McCormick","count":34,"avgAge":30.9,"flagged":26,"flagRate":76.5},{"name":"Norma Torres","count":28,"avgAge":33.8,"flagged":14,"flagRate":50.0},{"name":"Leeland Weiss","count":27,"avgAge":34.8,"flagged":4,"flagRate":14.8},{"name":"Carlos Garcia","count":17,"avgAge":13.1,"flagged":6,"flagRate":35.3},{"name":"Kyle Miller","count":1,"avgAge":5.0,"flagged":0,"flagRate":0.0}]}]};
+
 
 // TABS
 document.querySelectorAll('.tab').forEach(tab => {
@@ -424,133 +460,161 @@ donutEl.innerHTML = data.classes.map(c => {
 document.getElementById('d-num').textContent = fmt(total);
 document.getElementById('classLegend').innerHTML = data.classes.map(c => `<div class="legend-row"><div class="sw" style="background:${dColors[c.name]||'var(--text3)'}"></div><div>${esc(c.name)}</div><div class="cnt">${fmt(c.count)}</div></div>`).join('');
 
-// TEAM RECOGNITION
+// ==================== COMPOSITE SCORE / WOW RANKINGS ====================
 const flaggedCountByOwner = {};
 data.flaggedByOwner.forEach(g => flaggedCountByOwner[g.owner] = g.items.length);
 const prevByOwner = {};
 (typeof prevAssignees !== 'undefined' ? prevAssignees : []).forEach(p => prevByOwner[p.name] = p);
-const prevFlaggedByOwner = {};
-(typeof prevAssignees !== 'undefined' ? prevAssignees : []).forEach(p => prevFlaggedByOwner[p.name] = (p.flagged !== undefined ? p.flagged : null));
 
 const MIN_WO_COUNT = 5;
-const eligible = data.assignees.filter(a => a.count >= MIN_WO_COUNT).map(a => ({
-  name: a.name,
-  count: a.count,
-  avgAge: a.avgAge,
-  flagged: flaggedCountByOwner[a.name] || 0,
-}));
-eligible.forEach(e => e.flagRate = e.count ? Math.round(e.flagged / e.count * 1000) / 10 : 0);
 
-function normalizeArr(vals, lowerIsBetter) {
-  const mn = Math.min(...vals), mx = Math.max(...vals);
-  return vals.map(v => {
-    if (mx === mn) return 100;
-    return lowerIsBetter ? 100 * (mx - v) / (mx - mn) : 100 * (v - mn) / (mx - mn);
-  });
+// Composite Score: 0-100, higher = better. Fixed, interpretable scales (not relative to
+// this week's field) so scores are comparable week over week. Blends flag rate (60%) and
+// avg age (40%) — the two signals we've tracked consistently every week.
+function compositeScore(o) {
+  const fr = o.count ? o.flagged / o.count * 100 : 0;
+  const sFl = Math.max(0, 100 - fr * (100/60));        // 0% flagged = 100 pts, 60%+ = 0
+  const sAge = Math.max(0, 100 - o.avgAge * (100/30));  // 0 days = 100 pts, 30+ days = 0
+  return { score: sFl*0.60 + sAge*0.40, flagRate: fr };
 }
 
-// Best Team Member: 50% lowest avg age + 50% lowest flag rate
-let bestOwner = null;
-if (eligible.length) {
-  const ageScores = normalizeArr(eligible.map(e => e.avgAge), true);
-  const rateScores = normalizeArr(eligible.map(e => e.flagRate), true);
-  eligible.forEach((e, i) => e.bestScore = Math.round((ageScores[i] * 0.5 + rateScores[i] * 0.5) * 10) / 10);
-  bestOwner = [...eligible].sort((a, b) => b.bestScore - a.bestScore)[0];
-}
-
-// Most Improved: composite of age delta, flagged delta, count delta vs prior week (excludes Best winner)
-let improvedOwner = null;
-const improvable = eligible.filter(e => {
-  const p = prevByOwner[e.name];
-  return p && prevFlaggedByOwner[e.name] !== null && prevFlaggedByOwner[e.name] !== undefined && (!bestOwner || e.name !== bestOwner.name);
-}).map(e => {
-  const p = prevByOwner[e.name];
-  const prevFlagged = prevFlaggedByOwner[e.name];
-  return {
-    name: e.name,
-    avgAge: e.avgAge, count: e.count, flagged: e.flagged,
-    prevAvgAge: p.avgAge, prevCount: p.count, prevFlagged: prevFlagged,
-    ageDelta: Math.round((p.avgAge - e.avgAge) * 10) / 10,
-    flagDelta: prevFlagged - e.flagged,
-    countDelta: p.count - e.count,
-  };
+const eligible = data.assignees.filter(a => a.count >= MIN_WO_COUNT).map(a => {
+  const flagged = flaggedCountByOwner[a.name] || 0;
+  const cs = compositeScore({ count: a.count, avgAge: a.avgAge, flagged });
+  return { name: a.name, count: a.count, avgAge: a.avgAge, over30: a.over30, flagged,
+    flagRate: Math.round(cs.flagRate*10)/10, score: Math.round(cs.score*10)/10 };
 });
-if (improvable.length) {
-  const ad = normalizeArr(improvable.map(i => i.ageDelta), false);
-  const fd = normalizeArr(improvable.map(i => i.flagDelta), false);
-  const cd = normalizeArr(improvable.map(i => i.countDelta), false);
-  improvable.forEach((i, idx) => i.improveScore = Math.round((ad[idx] + fd[idx] + cd[idx]) / 3 * 10) / 10);
-  improvedOwner = [...improvable].sort((a, b) => b.improveScore - a.improveScore)[0];
-}
+const curRanked = [...eligible].sort((a,b) => b.score - a.score);
+const lowVolume = data.assignees.filter(a => a.count < MIN_WO_COUNT).sort((a,b) => a.avgAge - b.avgAge);
 
+// Previous week's ranking (for rank-change column + hero "held/up from" text)
+const prevEligible = (typeof prevAssignees !== 'undefined' ? prevAssignees : [])
+  .filter(p => p.count >= MIN_WO_COUNT)
+  .map(p => {
+    const cs = compositeScore({ count: p.count, avgAge: p.avgAge, flagged: p.flagged || 0 });
+    return { name: p.name, score: Math.round(cs.score*10)/10 };
+  })
+  .sort((a,b) => b.score - a.score);
+const prevRankPos = {}; prevEligible.forEach((o,i) => prevRankPos[o.name] = i+1);
+const prevScoreByName = {}; prevEligible.forEach(o => prevScoreByName[o.name] = o.score);
+
+// HERO CARDS
 let recogHtml = '';
-if (bestOwner) {
-  recogHtml += `<div class="rec-card gold">
-    <span class="rec-badge">🏆</span>
-    <div class="rec-label"><span class="rec-icon">⭐</span>Top Performer · This Week</div>
-    <div class="rec-name">${esc(bestOwner.name)}</div>
-    <div class="rec-sub">Lowest avg age + fewest flags relative to workload</div>
-    <div class="rec-stats">
-      <div class="rec-stat"><div class="v">${bestOwner.avgAge}d</div><div class="l">Avg Age</div></div>
-      <div class="rec-stat"><div class="v">${bestOwner.flagRate}%</div><div class="l">Flag Rate</div></div>
-      <div class="rec-stat"><div class="v">${bestOwner.count}</div><div class="l">Open WOs</div></div>
+if (curRanked.length) {
+  const winner = curRanked[0];
+  const winnerPrevRank = prevRankPos[winner.name];
+  const rankMoveTxt = winnerPrevRank ? (winnerPrevRank === 1 ? 'Held #1 from last week' : `Up from #${winnerPrevRank} last week`) : 'New to the board';
+  recogHtml += `<div class="hero-card winner">
+    <div class="hero-eyebrow"><span class="hero-medal">🏆</span> Owner of the Week</div>
+    <div class="hero-name">${esc(winner.name)}</div>
+    <div class="hero-sub">${rankMoveTxt}</div>
+    <div class="hero-score"><div class="n">${Math.round(winner.score)}</div><div class="l">Composite Score</div></div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="v">${winner.flagged} <span style="font-weight:400;opacity:.7">(${Math.round(winner.flagRate)}%)</span></div><div class="k">Flagged</div></div>
+      <div class="hero-stat"><div class="v">${winner.over30}</div><div class="k">30+ days</div></div>
+      <div class="hero-stat"><div class="v">${winner.avgAge}d</div><div class="k">Avg age</div></div>
+      <div class="hero-stat"><div class="v">${winner.count}</div><div class="k">Open WOs</div></div>
+    </div>
+  </div>`;
+
+  let improved = null;
+  curRanked.forEach(o => {
+    const delta = o.score - (prevScoreByName[o.name] ?? o.score);
+    if (!improved || delta > improved.delta) improved = { ...o, delta };
+  });
+  recogHtml += `<div class="hero-card improved">
+    <div class="hero-eyebrow"><span class="hero-medal">📈</span> Most Improved</div>
+    <div class="hero-name">${esc(improved.name)}</div>
+    <div class="hero-sub">${improved.delta > 0.05 ? `+${improved.delta.toFixed(1)} points vs last week` : 'Steadiest week-over-week'}</div>
+    <div class="hero-score"><div class="n" style="color:var(--mcgreen-dark)">${improved.delta > 0 ? '+' : ''}${improved.delta.toFixed(1)}</div><div class="l">Score change</div></div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="v">${prevScoreByName[improved.name] !== undefined ? Math.round(prevScoreByName[improved.name]) : '—'} → ${Math.round(improved.score)}</div><div class="k">Score last wk → now</div></div>
+      <div class="hero-stat"><div class="v">${improved.flagged} <span style="font-weight:400;opacity:.7">(${Math.round(improved.flagRate)}%)</span></div><div class="k">Flagged</div></div>
+      <div class="hero-stat"><div class="v">${improved.avgAge}d</div><div class="k">Avg age</div></div>
     </div>
   </div>`;
 } else {
-  recogHtml += `<div class="rec-card gold"><div class="rec-label"><span class="rec-icon">⭐</span>Top Performer · This Week</div><div class="rec-empty">Not enough data yet</div></div>`;
+  recogHtml = `<div class="hero-card winner"><div class="hero-eyebrow"><span class="hero-medal">🏆</span> Owner of the Week</div><div class="hero-name" style="font-size:16px">Not enough data yet</div></div>`;
 }
-if (improvedOwner) {
-  const ageArrow = improvedOwner.ageDelta > 0 ? '▼' : improvedOwner.ageDelta < 0 ? '▲' : '–';
-  recogHtml += `<div class="rec-card improved">
-    <span class="rec-badge">📈</span>
-    <div class="rec-label"><span class="rec-icon">🚀</span>Most Improved · WoW</div>
-    <div class="rec-name">${esc(improvedOwner.name)}</div>
-    <div class="rec-sub">Biggest gains across age, flags, and closures</div>
-    <div class="rec-stats">
-      <div class="rec-stat"><div class="v">${ageArrow} ${Math.abs(improvedOwner.ageDelta)}d</div><div class="l">Avg Age</div></div>
-      <div class="rec-stat"><div class="v">${improvedOwner.prevFlagged}→${improvedOwner.flagged}</div><div class="l">Flagged</div></div>
-      <div class="rec-stat"><div class="v">${improvedOwner.prevCount}→${improvedOwner.count}</div><div class="l">Open WOs</div></div>
-    </div>
-  </div>`;
-} else {
-  recogHtml += `<div class="rec-card improved"><div class="rec-label"><span class="rec-icon">🚀</span>Most Improved · WoW</div><div class="rec-empty">Not enough data yet</div></div>`;
-}
-document.getElementById('recognitionRow').innerHTML = recogHtml;
+document.getElementById('rankHero').innerHTML = recogHtml;
 
 // Owner avg age bars
 const ownerAge = [...data.assignees].sort((a,b) => b.avgAge - a.avgAge);
 const ageMaxO = Math.max(...ownerAge.map(x => x.avgAge), 1);
 
-// Rank every owner by the same composite used for Top Performer (age + flag rate).
-// Low-volume owners (below MIN_WO_COUNT) are ranked separately by avg age alone and listed after eligible owners.
-const eligibleNames = new Set(eligible.map(e => e.name));
-const rankedEligible = [...eligible].sort((a, b) => b.bestScore - a.bestScore).map(e => e.name);
-const lowVolume = data.assignees.filter(a => !eligibleNames.has(a.name)).sort((a, b) => a.avgAge - b.avgAge).map(a => a.name);
-const rankOrder = [...rankedEligible, ...lowVolume];
-const rankByName = {};
-rankOrder.forEach((name, i) => rankByName[name] = i + 1);
-
 document.getElementById('ownerAgeBars').innerHTML = ownerAge.map(x => {
   let col = x.avgAge >= 90 ? 'red' : x.avgAge >= 30 ? 'amber' : x.avgAge >= 14 ? 'cyan' : 'blue';
-  let valColor = x.avgAge >= 90 ? 'var(--red)' : x.avgAge >= 30 ? 'var(--amber)' : x.avgAge >= 14 ? 'var(--cyan)' : 'var(--blue)';
-  const prevO = prevByOwner[x.name];
-  let prevHtml = '<span style="color:var(--text3);font-weight:500">no prior data</span>';
-  if (prevO) {
-    const diff = Math.round((x.avgAge - prevO.avgAge) * 10) / 10;
-    const arrow = diff > 0 ? '▲' : diff < 0 ? '▼' : '–';
-    const dColor = diff > 0 ? 'var(--red)' : diff < 0 ? 'var(--green)' : 'var(--text3)';
-    const dBg = diff > 0 ? 'var(--red-dim)' : diff < 0 ? 'var(--green-dim)' : 'var(--border)';
-    prevHtml = `<span style="color:var(--text3)">prev wk ${prevO.avgAge}d</span><span class="age-owner-wow" style="color:${dColor};background:${dBg}">${arrow} ${Math.abs(diff)}d</span>`;
-  }
-  const rank = rankByName[x.name];
-  const rankCls = rank === 1 ? 'rank-1' : rank === 2 ? 'rank-2' : rank === 3 ? 'rank-3' : '';
-  const rankBadge = `<span class="rank-badge ${rankCls}">${rank}</span>`;
   return `<div class="age-owner-row">
-    <div><div class="age-owner-name">${rankBadge}${esc(x.name)}</div><div class="age-owner-ct">${x.count} WOs</div></div>
+    <div><div class="age-owner-name">${esc(x.name)}</div><div class="age-owner-ct">${x.count} WOs</div></div>
     <div class="bar-track"><div class="bar ${col}" style="width:${(x.avgAge/ageMaxO)*100}%"></div></div>
-    <div><div class="age-owner-val" style="color:${valColor}">${x.avgAge}<span class="unit">d</span></div><div class="age-owner-detail">med ${x.medianAge} · max ${x.maxAge}</div><div class="age-owner-detail">${prevHtml}</div></div>
+    <div><div class="age-owner-val">${x.avgAge}<span class="unit">d</span></div><div class="age-owner-detail">med ${x.medianAge} · max ${x.maxAge}</div></div>
   </div>`;
 }).join('');
+
+// LEADERBOARD
+const maxScore = Math.max(...curRanked.map(o => o.score), 1);
+document.querySelector('#leaderTbl tbody').innerHTML = curRanked.map((o,i) => {
+  const rank = i+1;
+  const pr = prevRankPos[o.name];
+  let rc;
+  if (!pr) rc = '<span class="delta flat">new</span>';
+  else if (pr > rank) rc = `<span class="delta up">▲ ${pr-rank}</span>`;
+  else if (pr < rank) rc = `<span class="delta down">▼ ${rank-pr}</span>`;
+  else rc = '<span class="delta flat">–</span>';
+  const sDelta = o.score - (prevScoreByName[o.name] ?? o.score);
+  const dCls = sDelta > 0.05 ? 'up' : sDelta < -0.05 ? 'down' : 'flat';
+  const dTxt = `${sDelta > 0 ? '+' : ''}${sDelta.toFixed(1)}`;
+  return `<tr>
+    <td><span class="rank-num ${rank===1?'r1':''}">${rank}</span></td>
+    <td><b>${esc(o.name)}</b> <span style="margin-left:4px">${rc}</span></td>
+    <td><div class="score-cell"><div class="score-bar"><div style="width:${(o.score/maxScore)*100}%"></div></div><div class="score-val">${Math.round(o.score)}</div></div></td>
+    <td><span class="delta ${dCls}">${dTxt}</span></td>
+    <td class="r mono">${o.flagged} <span style="color:var(--text3)">(${Math.round(o.flagRate)}%)</span></td>
+    <td class="r mono">${o.over30}</td>
+    <td class="r mono">${o.avgAge}d</td>
+    <td class="r mono">${o.count}</td>
+  </tr>`;
+}).join('');
+
+// SCORE TREND (last few weeks from trendData.snapshots, same composite formula)
+const trendWeeksAll = [...trendData.snapshots].sort((a,b) => a.date.localeCompare(b.date));
+const NUM_TREND_WEEKS = 4;
+const trendSnaps = trendWeeksAll.slice(-(NUM_TREND_WEEKS - 1));
+const trendWeekLabels = [...trendSnaps.map(s => s.label), 'now'];
+document.getElementById('trendTblHint').textContent = `Last ${trendWeekLabels.length} weeks`;
+document.getElementById('trendTblHead').innerHTML = `<th>Owner</th>` + trendWeekLabels.map(w=>`<th>${w}</th>`).join('') + `<th>Trend</th>`;
+
+function trendSparkline(vals) {
+  const w=84,h=24,pad=3;
+  const mn=Math.min(...vals)-3, mx=Math.max(...vals)+3;
+  const xs=(w-pad*2)/(vals.length-1 || 1);
+  const ys=v=>(h-pad*2)*(1-(v-mn)/((mx-mn)||1))+pad;
+  const pts=vals.map((v,i)=>`${pad+i*xs},${ys(v)}`).join(' ');
+  const last=vals.length-1;
+  const up=vals[last]>=vals[0];
+  return `<svg viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" style="overflow:visible"><polyline points="${pts}" fill="none" stroke="${up?'var(--mcgreen)':'var(--red)'}" stroke-width="1.5" stroke-linejoin="round"/><circle cx="${pad+last*xs}" cy="${ys(vals[last])}" r="3" fill="${up?'var(--mcgreen)':'var(--red)'}"/></svg>`;
+}
+const trendOwnerNames = curRanked.map(o => o.name);
+document.querySelector('#trendTbl tbody').innerHTML = trendOwnerNames.map(nm => {
+  const histScores = trendSnaps.map(s => {
+    const o = s.owners.find(o => o.name === nm && o.count >= MIN_WO_COUNT);
+    if (!o) return null;
+    return Math.round(compositeScore({ count: o.count, avgAge: o.avgAge, flagged: o.flagged }).score * 10) / 10;
+  });
+  const curScore = (eligible.find(e => e.name === nm) || {}).score;
+  const vals = [...histScores, curScore].map(v => v === null || v === undefined ? null : v);
+  const cells = vals.map((v,i) => {
+    const isLast = i===vals.length-1;
+    if (v === null) return `<td class="mono" style="color:var(--text3)">—</td>`;
+    return `<td class="mono"${isLast?' style="font-weight:700;color:var(--mcgreen-dark)"':' style="color:var(--text3)"'}>${Math.round(v)}</td>`;
+  }).join('');
+  const known = vals.filter(v => v !== null);
+  const spark = known.length > 1 ? trendSparkline(known) : '';
+  return `<tr><td><b>${esc(nm)}</b></td>${cells}<td class="spark-cell">${spark}</td></tr>`;
+}).join('');
+
+// METHOD NOTE
+document.getElementById('methodNote').innerHTML = `<b>How the Composite Score works.</b> Each owner gets a 0&ndash;100 score that rewards follow-up discipline and keeping work moving, normalized by workload so carrying more WOs isn&rsquo;t penalized. It blends two rates on fixed scales: <span class="pill">Flagged rate &times;60%</span> (overdue or no follow-up, 0% = 100 pts, 60%+ = 0) and <span class="pill">Avg age &times;40%</span> (0 days = 100, 30+ = 0). <b>Owner of the Week</b> is the highest score this week; <b>Most Improved</b> is the biggest score gain vs. last week. Owners under ${MIN_WO_COUNT} open WOs are excluded from scoring (shown in the Avg Age by Owner card on Overview only) since a handful of WOs isn't a meaningful sample.`;
 
 // FLAGGED TAB
 let fOverdue = 0, fNofu = 0;
@@ -633,34 +697,6 @@ document.querySelector('#staleTbl tbody').innerHTML = data.staleItems.map(r => `
   <td>${esc(r.assignee)}</td><td class="desc-cell">${esc(r.description)}${r.note ? `<div class="note">${esc(r.note)}</div>` : ''}</td>
 </tr>`).join('');
 
-// COMPOSITION TAB
-renderBars('catBarsFull', data.categories, 'count', 'name', 17, 'cyan');
-document.querySelector('#locTbl tbody').innerHTML = data.stores.slice(0,30).map(s => `<tr><td>${esc(s.name)}</td><td class="r mono">${s.count}</td><td class="r mono">${s.avgAge}d</td><td class="r mono">${s.oldest}d</td></tr>`).join('');
-renderBars('ownerBarsFull', data.assignees, 'count', 'name', 10, 'green');
-document.getElementById('ownerAgeBarsFull').innerHTML = ownerAge.map(x => {
-  let col = x.avgAge >= 90 ? 'red' : x.avgAge >= 30 ? 'amber' : x.avgAge >= 14 ? 'cyan' : 'blue';
-  return `<div class="age-owner-row">
-    <div><div class="age-owner-name">${esc(x.name)}</div><div class="age-owner-ct">${x.count} WOs · ${x.over30} stale</div></div>
-    <div class="bar-track"><div class="bar ${col}" style="width:${(x.avgAge/ageMaxO)*100}%"></div></div>
-    <div><div class="age-owner-val">${x.avgAge}<span class="unit">d</span></div><div class="age-owner-detail">med ${x.medianAge} · max ${x.maxAge}</div></div>
-  </div>`;
-}).join('');
-
-// VENDORS TAB
-document.querySelector('#vendorTbl tbody').innerHTML = data.vendors.map(v => `<tr>
-  <td><b>${esc(v.vendor)}</b></td><td class="r mono">${fmt(v.count)}</td>
-  <td class="r mono">${pct(v.count, k.total)}%</td><td class="r mono">${v.avgAge}d</td>
-  <td class="r">${v.maxAge >= 60 ? `<span class="tag age red">${v.maxAge}d</span>` : v.maxAge >= 30 ? `<span class="tag age amber">${v.maxAge}d</span>` : v.maxAge + 'd'}</td>
-</tr>`).join('');
-
-// FOLLOW-UPS TAB
-document.getElementById('fuCt').textContent = data.followUps.length + ' scheduled';
-document.querySelector('#fuTbl tbody').innerHTML = data.followUps.map(f => `<tr>
-  <td>${f.date < TODAY ? '<span class="badge overdue">Overdue</span> ' : ''}<span class="tag ${f.date < TODAY ? 'red' : 'blue'}">${esc(f.date)}</span></td>
-  <td class="mono"><b>${f.id}</b></td><td>${ageTag(f.age)}</td>
-  <td>${esc(f.store)}</td><td>${esc(f.vendor||'—')}</td><td class="desc-cell">${esc(f.reason)}</td>
-</tr>`).join('');
-
 // REGISTER TAB
 const classes = [...new Set(data.workOrders.map(r => r.class))];
 document.getElementById('fClass').innerHTML += classes.map(c => `<option>${esc(c)}</option>`).join('');
@@ -702,195 +738,199 @@ function renderAll() {
 });
 renderAll();
 
-// ==================== LAST 30 DAYS TRENDS ====================
-// snapshots holds one entry per published weekly dashboard. Each week, append this
-// week's snapshot here (data.kpis + data.assignees + per-owner flagged counts).
-// renderTrends() below filters to a rolling 30-day window from TODAY and computes
-// composite scores dynamically, so this list can just keep growing week over week
-// without needing any hand-computed "monthly" summary.
-const trendData = {"snapshots":[{"date":"2026-06-02","label":"06-02","total":516,"avgAge":37.6,"repairAvgAge":18.2,"pmAvgAge":43.6,"over30":403,"over60":2,"repair":106,"pm":401,"owners":[{"name":"Norma Torres","count":90,"avgAge":47.0,"flagged":10,"flagRate":11.1},{"name":"Leeland Weiss","count":90,"avgAge":46.7,"flagged":28,"flagRate":31.1},{"name":"Greg Wallace","count":85,"avgAge":36.0,"flagged":41,"flagRate":48.2},{"name":"Steven McCormick","count":68,"avgAge":45.6,"flagged":14,"flagRate":20.6},{"name":"Carlos Garcia","count":2,"avgAge":34.5,"flagged":2,"flagRate":100.0},{"name":"Kyle Miller","count":1,"avgAge":5.0,"flagged":0,"flagRate":0.0}]},{"date":"2026-06-08","label":"06-08","total":433,"avgAge":43.4,"repairAvgAge":20.1,"pmAvgAge":51.1,"over30":345,"over60":2,"repair":102,"pm":327,"owners":[{"name":"Norma Torres","count":87,"avgAge":50.7,"flagged":38,"flagRate":43.7},{"name":"Leeland Weiss","count":85,"avgAge":51.5,"flagged":20,"flagRate":23.5},{"name":"Greg Wallace","count":83,"avgAge":40.2,"flagged":49,"flagRate":59.0},{"name":"Steven McCormick","count":66,"avgAge":48.5,"flagged":0,"flagRate":0.0},{"name":"Carlos Garcia","count":2,"avgAge":41.0,"flagged":0,"flagRate":0.0},{"name":"Kyle Miller","count":1,"avgAge":11.0,"flagged":0,"flagRate":0.0}]},{"date":"2026-06-15","label":"06-15","total":353,"avgAge":41.2,"repairAvgAge":19.1,"pmAvgAge":53.2,"over30":238,"over60":203,"repair":116,"pm":231,"owners":[{"name":"Greg Wallace","count":90,"avgAge":35.9,"flagged":36,"flagRate":40.0},{"name":"Norma Torres","count":77,"avgAge":43.8,"flagged":42,"flagRate":54.5},{"name":"Leeland Weiss","count":62,"avgAge":53.4,"flagged":33,"flagRate":53.2},{"name":"Steven McCormick","count":57,"avgAge":49.7,"flagged":36,"flagRate":63.2},{"name":"Carlos Garcia","count":3,"avgAge":32.7,"flagged":0,"flagRate":0.0},{"name":"Kyle Miller","count":1,"avgAge":18.0,"flagged":1,"flagRate":100.0}]},{"date":"2026-06-23","label":"06-23","total":357,"avgAge":34.0,"repairAvgAge":20.3,"pmAvgAge":42.0,"over30":166,"over60":135,"repair":128,"pm":226,"owners":[{"name":"Greg Wallace","count":117,"avgAge":27.3,"flagged":48,"flagRate":41.0},{"name":"Steven McCormick","count":73,"avgAge":46.7,"flagged":7,"flagRate":9.6},{"name":"Leeland Weiss","count":64,"avgAge":38.4,"flagged":5,"flagRate":7.8},{"name":"Carlos Garcia","count":51,"avgAge":8.5,"flagged":0,"flagRate":0.0},{"name":"Norma Torres","count":50,"avgAge":52.2,"flagged":44,"flagRate":88.0},{"name":"Kyle Miller","count":2,"avgAge":13.0,"flagged":1,"flagRate":50.0}]},{"date":"2026-06-29","label":"06-29","total":302,"avgAge":37.1,"repairAvgAge":21.6,"pmAvgAge":48.6,"over30":136,"over60":105,"repair":127,"pm":173,"owners":[{"name":"Greg Wallace","count":106,"avgAge":30.3,"flagged":73,"flagRate":68.9},{"name":"Steven McCormick","count":61,"avgAge":52.0,"flagged":23,"flagRate":37.7},{"name":"Carlos Garcia","count":50,"avgAge":9.8,"flagged":23,"flagRate":46.0},{"name":"Leeland Weiss","count":43,"avgAge":47.9,"flagged":14,"flagRate":32.6},{"name":"Norma Torres","count":40,"avgAge":55.6,"flagged":36,"flagRate":90.0},{"name":"Kyle Miller","count":2,"avgAge":19.0,"flagged":1,"flagRate":50.0}]},{"date":"2026-07-09","label":"07-09","total":220,"avgAge":35.4,"repairAvgAge":21.5,"pmAvgAge":57.1,"over30":85,"over60":69,"repair":121,"pm":89,"owners":[{"name":"Greg Wallace","count":97,"avgAge":27.1,"flagged":76,"flagRate":78.4},{"name":"Steven McCormick","count":51,"avgAge":59.9,"flagged":19,"flagRate":37.3},{"name":"Leeland Weiss","count":31,"avgAge":31.0,"flagged":16,"flagRate":51.6},{"name":"Carlos Garcia","count":20,"avgAge":12.4,"flagged":10,"flagRate":50.0},{"name":"Norma Torres","count":20,"avgAge":43.8,"flagged":20,"flagRate":100.0},{"name":"Kyle Miller","count":1,"avgAge":16.0,"flagged":1,"flagRate":100.0}]},{"date":"2026-07-22","label":"07-22","total":201,"avgAge":25.7,"repairAvgAge":21.0,"pmAvgAge":35.1,"over30":60,"over60":33,"repair":122,"pm":68,"owners":[{"name":"Greg Wallace","count":85,"avgAge":31.0,"flagged":60,"flagRate":70.6},{"name":"Steven McCormick","count":45,"avgAge":17.3,"flagged":9,"flagRate":20.0},{"name":"Leeland Weiss","count":32,"avgAge":24.9,"flagged":2,"flagRate":6.2},{"name":"Norma Torres","count":26,"avgAge":32.1,"flagged":14,"flagRate":53.8},{"name":"Carlos Garcia","count":13,"avgAge":8.8,"flagged":3,"flagRate":23.1}]},{"date":"2026-07-27","label":"07-27","total":222,"avgAge":26.3,"repairAvgAge":20.3,"pmAvgAge":40.1,"over30":59,"over60":33,"repair":145,"pm":66,"owners":[{"name":"Greg Wallace","count":93,"avgAge":31.6,"flagged":72,"flagRate":77.4},{"name":"Steven McCormick","count":48,"avgAge":19.1,"flagged":17,"flagRate":35.4},{"name":"Norma Torres","count":30,"avgAge":32.3,"flagged":17,"flagRate":56.7},{"name":"Leeland Weiss","count":28,"avgAge":31.6,"flagged":6,"flagRate":21.4},{"name":"Carlos Garcia","count":23,"avgAge":6.0,"flagged":4,"flagRate":17.4}]},{"date":"2026-08-03","label":"08-03","total":239,"avgAge":27.3,"repairAvgAge":22.2,"pmAvgAge":44.2,"over30":72,"over60":32,"repair":158,"pm":63,"owners":[{"name":"Greg Wallace","count":111,"avgAge":29.9,"flagged":68,"flagRate":61.3},{"name":"Steven McCormick","count":47,"avgAge":21.2,"flagged":33,"flagRate":70.2},{"name":"Leeland Weiss","count":31,"avgAge":33.0,"flagged":11,"flagRate":35.5},{"name":"Carlos Garcia","count":26,"avgAge":9.2,"flagged":9,"flagRate":34.6},{"name":"Norma Torres","count":24,"avgAge":40.0,"flagged":18,"flagRate":75.0}]},{"date":"2026-08-11","label":"08-11","total":200,"avgAge":30.2,"repairAvgAge":25.2,"pmAvgAge":52.2,"over30":62,"over60":31,"repair":147,"pm":40,"owners":[{"name":"Greg Wallace","count":110,"avgAge":28.1,"flagged":69,"flagRate":62.7},{"name":"Steven McCormick","count":34,"avgAge":26.6,"flagged":29,"flagRate":85.3},{"name":"Leeland Weiss","count":25,"avgAge":37.7,"flagged":9,"flagRate":36.0},{"name":"Norma Torres","count":17,"avgAge":52.5,"flagged":17,"flagRate":100.0},{"name":"Carlos Garcia","count":14,"avgAge":14.9,"flagged":8,"flagRate":57.1}]},{"date":"2026-08-17","label":"08-17","total":199,"avgAge":30.8,"repairAvgAge":27.4,"pmAvgAge":42.8,"over30":62,"over60":33,"repair":139,"pm":47,"owners":[{"name":"Greg Wallace","count":92,"avgAge":32.2,"flagged":62,"flagRate":67.4},{"name":"Steven McCormick","count":34,"avgAge":30.9,"flagged":26,"flagRate":76.5},{"name":"Norma Torres","count":28,"avgAge":33.8,"flagged":14,"flagRate":50.0},{"name":"Leeland Weiss","count":27,"avgAge":34.8,"flagged":4,"flagRate":14.8},{"name":"Carlos Garcia","count":17,"avgAge":13.1,"flagged":6,"flagRate":35.3},{"name":"Kyle Miller","count":1,"avgAge":5.0,"flagged":0,"flagRate":0.0}]}]};
 
-function renderTrends() {
-  const WINDOW_DAYS = 30;
-  const todayDate = new Date(TODAY + 'T00:00:00');
-  const cutoff = new Date(todayDate); cutoff.setDate(cutoff.getDate() - WINDOW_DAYS);
-  const snaps = trendData.snapshots
-    .filter(s => { const d = new Date(s.date + 'T00:00:00'); return d >= cutoff && d <= todayDate; })
-    .sort((a,b) => a.date.localeCompare(b.date));
 
-  if (snaps.length === 0) {
-    document.getElementById('trendsContent').innerHTML = `<div class="card"><div class="card-body">Not enough data yet for the last 30 days.</div></div>`;
-    return;
+function daysBefore(fromISO, toISO){ return Math.round((new Date(fromISO) - new Date(toISO)) / 86400000); }
+
+function recapSpark(vals, good, weeks) {
+  const col = good===null ? 'var(--blue)' : good ? 'var(--mcgreen)' : 'var(--red)';
+  const w=560, h=150, padL=8, padR=8, padT=24, padB=26;
+  if (vals.length === 1) {
+    return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="${h+20}" preserveAspectRatio="none" style="overflow:visible"><circle cx="${w/2}" cy="${h/2}" r="4" fill="${col}"/></svg>`;
   }
-
-  const labels = snaps.map(s => s.label);
-  const WIN_WEEKS = snaps.length;
-
-  // Per-week composite score (mirrors the weekly Best Team Member scoring: 50% normalized
-  // low avg age + 50% normalized low flag rate, among owners with 5+ WOs that week).
-  function weekScores(snap) {
-    const eligible = snap.owners.filter(o => o.count >= 5);
-    const scores = {};
-    if (eligible.length === 0) return scores;
-    const ages = eligible.map(o => o.avgAge), rates = eligible.map(o => o.flagRate);
-    const minA = Math.min(...ages), maxA = Math.max(...ages);
-    const minR = Math.min(...rates), maxR = Math.max(...rates);
-    eligible.forEach(o => {
-      const normAge = maxA > minA ? (maxA - o.avgAge) / (maxA - minA) : 1;
-      const normRate = maxR > minR ? (maxR - o.flagRate) / (maxR - minR) : 1;
-      scores[o.name] = Math.round((0.5 * normAge + 0.5 * normRate) * 1000) / 10;
-    });
-    return scores;
-  }
-  const weekScoreMaps = snaps.map(weekScores);
-
-  // Build per-owner composite across the window
-  const allOwners = [...new Set(snaps.flatMap(s => s.owners.filter(o=>o.count>=5).map(o=>o.name)))].filter(n => n !== 'Shae Davis');
-  const monthly = allOwners.map(name => {
-    const weeklyData = snaps.map((s,i) => {
-      const o = s.owners.find(o=>o.name===name && o.count>=5);
-      if (!o) return null;
-      return { date: s.date, score: weekScoreMaps[i][name], avgAge:o.avgAge, flagRate:o.flagRate, count:o.count };
-    });
-    const present = weeklyData.filter(Boolean);
-    const avgScore = present.length ? Math.round(present.reduce((a,w)=>a+w.score,0)/present.length*10)/10 : 0;
-    return { name, avgScore, weeks: present.length, weeklyData };
-  });
-
-  // Full-window participants only (present in every week of the current window) rank for recognition
-  const fullWindow = monthly.filter(m => m.weeks === WIN_WEEKS).sort((a,b) => b.avgScore - a.avgScore);
-  const windowWinner = fullWindow[0] || null;
-
-  // Trend direction helper
-  function trend(first, last) {
-    const d = last - first;
-    if (Math.abs(d) < 0.5) return { arrow: '→', cls: 'neutral', label: 'Flat' };
-    return d < 0
-      ? { arrow: '▼', cls: 'good', label: `Down ${Math.abs(Math.round(d * 10)/10)}` }
-      : { arrow: '▲', cls: 'bad', label: `Up ${Math.abs(Math.round(d * 10)/10)}` };
-  }
-  function trendCount(first, last) {
-    const d = last - first;
-    if (Math.abs(d) < 1) return { arrow: '→', cls: 'neutral', label: 'Flat' };
-    return d < 0
-      ? { arrow: '▼', cls: 'good', label: `Down ${Math.abs(d)}` }
-      : { arrow: '▲', cls: 'bad', label: `Up ${d}` };
-  }
-
-  const totalTrend   = trendCount(snaps[0].total,        snaps[snaps.length-1].total);
-  const ageTrend     = trend(snaps[0].avgAge,             snaps[snaps.length-1].avgAge);
-  const repairTrend  = trend(snaps[0].repairAvgAge,       snaps[snaps.length-1].repairAvgAge);
-  const over30Trend  = trendCount(snaps[0].over30,        snaps[snaps.length-1].over30);
-  const over60Trend  = trendCount(snaps[0].over60,        snaps[snaps.length-1].over60);
-
-  // SVG sparkline helper
-  function sparkline(values, color, h=36, w=180) {
-    const mn = Math.min(...values), mx = Math.max(...values);
-    const range = mx - mn || 1;
-    const pts = values.map((v, i) => {
-      const x = (i / (values.length-1)) * w;
-      const y = h - ((v - mn) / range) * (h - 4) - 2;
-      return `${x},${y}`;
-    });
-    return `<svg viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" style="display:block">
-      <polyline points="${pts.join(' ')}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-      ${values.map((v,i) => {
-        const x = (i/(values.length-1))*w;
-        const y = h - ((v-mn)/range)*(h-4) - 2;
-        return `<circle cx="${x}" cy="${y}" r="3.5" fill="${color}"/><text x="${x}" y="${y-6}" text-anchor="middle" font-size="9" fill="var(--text2)" font-family="JetBrains Mono,monospace">${v}</text>`;
-      }).join('')}
-    </svg>`;
-  }
-
-  // Owner trend table
-  const ownerRows = allOwners.map(name => {
-    const weeks = snaps.map(s => s.owners.find(o=>o.name===name && o.count>=5) || null);
-    const present = weeks.filter(Boolean);
-    if (present.length === 0) return '';
-    const mdata = monthly.find(m => m.name === name);
-    const avgScore = mdata ? mdata.avgScore : '—';
-    const rankEl = name === (windowWinner?.name) ? '<span class="trend-badge gold">🏆 #1</span>' :
-                   (fullWindow[1]?.name === name ? '<span class="trend-badge silver">#2</span>' :
-                   (fullWindow[2]?.name === name ? '<span class="trend-badge bronze">#3</span>' : ''));
-    return `<tr>
-      <td><b>${esc(name)}</b> ${rankEl}</td>
-      ${weeks.map(w => w
-        ? `<td class="r"><div style="font-weight:700;color:var(--text)">${w.avgAge}d</div><div style="font-size:9.5px;color:var(--text3)">${w.flagRate}% flagged</div></td>`
-        : `<td class="r" style="color:var(--text3)">—</td>`
-      ).join('')}
-      <td class="r"><b>${avgScore}</b></td>
-    </tr>`;
+  const mn=Math.min(...vals), mx=Math.max(...vals);
+  const range = (mx-mn) || 1;
+  const plotW = w - padL - padR, plotH = h - padT - padB;
+  const xs = plotW/(vals.length-1);
+  const ys = v => padT + plotH*(1-(v-mn)/range);
+  const pts = vals.map((v,i)=>`${padL+i*xs},${ys(v)}`).join(' ');
+  const last = vals.length-1;
+  const gridLines = [0,0.5,1].map(f => {
+    const y = padT + plotH*f;
+    return `<line x1="${padL}" y1="${y}" x2="${w-padR}" y2="${y}" stroke="var(--border)" stroke-width="1" stroke-dasharray="3,3"/>`;
   }).join('');
-
-  // Recognition cards
-  let recogHtml = '';
-  if (windowWinner) {
-    const wd = windowWinner.weeklyData.filter(Boolean);
-    const best = Math.min(...wd.map(w=>w.avgAge));
-    recogHtml += `<div class="rec-card gold" style="flex:1">
-      <span class="rec-badge">🏆</span>
-      <div class="rec-label"><span class="rec-icon">⭐</span>Last 30 Days Top Performer</div>
-      <div class="rec-name">${esc(windowWinner.name)}</div>
-      <div class="rec-sub">Highest avg composite score across ${windowWinner.weeks} week${windowWinner.weeks===1?'':'s'}</div>
-      <div class="rec-stats">
-        <div class="rec-stat"><div class="v">${windowWinner.avgScore}</div><div class="l">Avg Score</div></div>
-        <div class="rec-stat"><div class="v">${best}d</div><div class="l">Best Week</div></div>
-        <div class="rec-stat"><div class="v">${windowWinner.weeks}/${WIN_WEEKS}</div><div class="l">Weeks</div></div>
-      </div>
-    </div>`;
+  const areaPath = `M${padL},${ys(vals[0])} ` + vals.map((v,i)=>`L${padL+i*xs},${ys(v)}`).join(' ') + ` L${w-padR},${h-padB} L${padL},${h-padB} Z`;
+  const dots = vals.map((v,i) => {
+    const x = padL+i*xs, y = ys(v);
+    const isLast = i===last;
+    const labelY = y - 9;
+    return `<circle cx="${x}" cy="${y}" r="${isLast?4.5:3}" fill="${isLast?col:'var(--card)'}" stroke="${col}" stroke-width="${isLast?0:1.8}"/>`
+      + `<text x="${x}" y="${labelY}" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" font-weight="${isLast?700:500}" fill="${isLast?col:'var(--text2)'}">${v}</text>`;
+  }).join('');
+  const xLabels = weeks ? weeks.map((wkLbl,i) => {
+    const x = padL+i*xs;
+    return `<text x="${x}" y="${h-6}" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9.5" fill="var(--text3)">${esc(wkLbl)}</text>`;
+  }).join('') : '';
+  return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="${h}" preserveAspectRatio="xMidYMid meet" style="overflow:visible">
+    ${gridLines}
+    <path d="${areaPath}" fill="${col}" fill-opacity="0.07" stroke="none"/>
+    <polyline points="${pts}" fill="none" stroke="${col}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+    ${dots}
+    ${xLabels}
+  </svg>`;
+}
+function trendCard(label, vals, unit, lowerBetter, sinceWeek, rollingDays, weeks) {
+  const first=vals[0], last=vals[vals.length-1];
+  const net=Math.round((last-first)*10)/10;
+  const pctv=first ? Math.round(net/first*1000)/10 : 0;
+  let dirCls, arrow, good;
+  if (net===0){ dirCls='neutral'; arrow='–'; good=null; }
+  else {
+    arrow = net>0 ? '▲' : '▼';
+    if (lowerBetter===null){ dirCls='neutral'; good=null; }
+    else { good = lowerBetter ? net<0 : net>0; dirCls = good ? 'good' : 'bad'; }
   }
-  if (fullWindow[1]) {
-    const ru = fullWindow[1];
-    recogHtml += `<div class="rec-card improved" style="flex:1">
-      <span class="rec-badge">🥈</span>
-      <div class="rec-label"><span class="rec-icon">🚀</span>Last 30 Days Runner-Up</div>
-      <div class="rec-name">${esc(ru.name)}</div>
-      <div class="rec-sub">2nd highest composite score · full window</div>
-      <div class="rec-stats">
-        <div class="rec-stat"><div class="v">${ru.avgScore}</div><div class="l">Avg Score</div></div>
-        <div class="rec-stat"><div class="v">${ru.weeks}/${WIN_WEEKS}</div><div class="l">Weeks</div></div>
-      </div>
-    </div>`;
-  }
-
-  document.getElementById('trendsContent').innerHTML = `
-    <div style="display:flex;gap:14px;margin-bottom:20px">${recogHtml}</div>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:20px">
-      ${[
-        ['Open WO Count',   snaps.map(s=>s.total),       totalTrend,  'var(--blue)',   ''],
-        ['Overall Avg Age', snaps.map(s=>s.avgAge),       ageTrend,    'var(--amber)',  'd'],
-        ['Repair Avg Age',  snaps.map(s=>s.repairAvgAge), repairTrend, 'var(--red)',    'd'],
-        ['30+ Day WOs',     snaps.map(s=>s.over30),       over30Trend, 'var(--amber)',  ''],
-        ['60+ Day WOs',     snaps.map(s=>s.over60),       over60Trend, 'var(--red)',    ''],
-      ].map(([title, vals, tr, color, unit]) => `
-        <div class="card">
-          <div class="card-head"><h3>${title}</h3>
-            <span style="font-weight:700;color:${tr.cls==='good'?'var(--green)':tr.cls==='bad'?'var(--red)':'var(--text3)'}">${tr.arrow} ${tr.label}${unit}</span>
-          </div>
-          <div class="card-body" style="padding-top:8px">
-            ${sparkline(vals, color)}
-            <div style="display:flex;justify-content:space-between;margin-top:6px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3)">
-              ${labels.map(l=>`<span>${l}</span>`).join('')}
-            </div>
-            <div style="display:flex;justify-content:space-between;margin-top:10px">
-              <div><div style="font-size:10px;color:var(--text3)">Start (${labels[0]})</div><div style="font-weight:700;font-size:16px">${vals[0]}${unit}</div></div>
-              <div style="text-align:right"><div style="font-size:10px;color:var(--text3)">End (${labels[labels.length-1]})</div><div style="font-weight:700;font-size:16px">${vals[vals.length-1]}${unit}</div></div>
-            </div>
-          </div>
-        </div>`).join('')}
-    </div>
-
-    <div class="card">
-      <div class="card-head"><h3>Owner Performance — Last 30 Days</h3><div class="hint">Avg age · flag rate · composite score (higher = better)</div></div>
-      <div class="tbl-wrap"><table>
-        <thead><tr><th>Owner</th>${labels.map(l=>`<th class="r">${l}</th>`).join('')}<th class="r">30-Day Score</th></tr></thead>
-        <tbody>${ownerRows}</tbody>
-      </table></div>
-    </div>`;
+  const netTxt = `${net>0?'+':''}${net}${unit==='d'?'d':''} (${pctv>0?'+':''}${pctv}%)`;
+  const verdict = vals.length < 2
+    ? 'Only one snapshot in the window so far — nothing to compare yet.'
+    : (lowerBetter===null
+        ? `${net>0?'Up':net<0?'Down':'Flat'} ${Math.abs(net)}${unit} (${pctv}%) over the last ${rollingDays} days.`
+        : `${good ? 'Trending the right way' : net===0 ? 'Flat' : 'Trending the wrong way'} — ${net>0?'+':''}${net}${unit} (${pctv}%) over the last ${rollingDays} days.`);
+  return `<div class="trend-card">
+    <div class="tc-label">${label}</div>
+    <div class="tc-val">${last}${unit==='d'?'<span class="u">d</span>':''}</div>
+    <div class="trend-dir ${dirCls}">${arrow} ${netTxt}<span class="since">since ${vals.length>1?sinceWeek:'now'}</span></div>
+    <div class="tc-spark">${recapSpark(vals, good, weeks)}</div>
+    <div class="tc-verdict">${verdict}</div>
+  </div>`;
 }
 
-renderTrends();
+// Shared: build a rolling window of KPI + owner-score history from trendData.snapshots
+function buildWindow(rollingDays) {
+  const todayDate = new Date(TODAY + 'T00:00:00');
+  const cutoff = new Date(todayDate); cutoff.setDate(cutoff.getDate() - rollingDays);
+  const snaps = trendData.snapshots
+    .filter(s => { const d = new Date(s.date + 'T00:00:00'); return d >= cutoff && d < todayDate; })
+    .sort((a,b) => a.date.localeCompare(b.date));
+  const kpiWindow = snaps.map(s => ({
+    date: s.date, week: s.label, total: s.total, avgAge: s.avgAge, repairAvgAge: s.repairAvgAge,
+    over30: s.over30, flagged: s.owners.reduce((a,o)=>a+o.flagged,0)
+  })).concat([{ date: TODAY, week: 'now', total: k.total, avgAge: k.avgAge, repairAvgAge: k.repairAvgAge, over30: k.over30, flagged: totalFlagged }]);
+
+  const ownerNamesInWindow = [...new Set(snaps.flatMap(s => s.owners.filter(o=>o.count>=MIN_WO_COUNT).map(o=>o.name)))]
+    .concat(curRanked.map(o=>o.name)).filter((v,i,a)=>a.indexOf(v)===i);
+  const scoreWindowByOwner = {};
+  ownerNamesInWindow.forEach(nm => {
+    const hist = snaps.map(s => {
+      const o = s.owners.find(o => o.name === nm && o.count >= MIN_WO_COUNT);
+      if (!o) return null;
+      return { date: s.date, week: s.label, score: Math.round(compositeScore({count:o.count,avgAge:o.avgAge,flagged:o.flagged}).score*10)/10 };
+    }).filter(Boolean);
+    const cur = eligible.find(e => e.name === nm);
+    if (cur) hist.push({ date: TODAY, week: 'now', score: cur.score });
+    if (hist.length) scoreWindowByOwner[nm] = hist;
+  });
+  return { kpiWindow, scoreWindowByOwner };
+}
+
+function renderRollingTab(rollingDays, ids, eyebrowSuffix) {
+  const { kpiWindow, scoreWindowByOwner } = buildWindow(rollingDays);
+  if (kpiWindow.length < 2) {
+    document.getElementById(ids.intro).innerHTML = `Not enough weekly snapshots yet to show a rolling ${rollingDays}-day view.`;
+    return;
+  }
+  const windowSpanLabel = `${kpiWindow[0].week} → ${kpiWindow[kpiWindow.length-1].week}`;
+
+  document.getElementById(ids.intro).innerHTML =
+    `Rolling ${rollingDays}-day view <span class="mono" style="color:var(--text3)">(${windowSpanLabel} · ${kpiWindow.length} weekly snapshots)</span> — recalculated fresh each week from whichever snapshots fall in the trailing ${rollingDays} days, so it never resets at a calendar-month boundary. Up/down arrows are colored by whether the move is good or bad for facilities health.`;
+
+  document.getElementById(ids.trends).innerHTML =
+    trendCard('Open WO Count',   kpiWindow.map(e=>e.total),        '',  null, kpiWindow[0].week, rollingDays, kpiWindow.map(e=>e.week)) +
+    trendCard('Overall Avg Age', kpiWindow.map(e=>e.avgAge),       'd', true, kpiWindow[0].week, rollingDays, kpiWindow.map(e=>e.week)) +
+    trendCard('Repair Avg Age',  kpiWindow.map(e=>e.repairAvgAge), 'd', true, kpiWindow[0].week, rollingDays, kpiWindow.map(e=>e.week)) +
+    trendCard('Flagged WOs',     kpiWindow.map(e=>e.flagged),      '',  true, kpiWindow[0].week, rollingDays, kpiWindow.map(e=>e.week));
+
+  const windowAvg = {};
+  Object.keys(scoreWindowByOwner).forEach(nm => {
+    const s = scoreWindowByOwner[nm].map(e=>e.score);
+    windowAvg[nm] = s.reduce((a,b)=>a+b,0)/s.length;
+  });
+  const ranked = Object.keys(windowAvg).sort((a,b)=>windowAvg[b]-windowAvg[a]);
+  if (!ranked.length) {
+    document.getElementById(ids.hero).innerHTML = `<div class="hero-card winner"><div class="hero-eyebrow">Not enough data yet</div></div>`;
+    return;
+  }
+  const topName = ranked[0];
+  let improvedEntry = null;
+  Object.keys(scoreWindowByOwner).forEach(nm => {
+    const s = scoreWindowByOwner[nm].map(e=>e.score);
+    const d = s[s.length-1]-s[0];
+    if (!improvedEntry || d > improvedEntry.d) improvedEntry = { nm, d };
+  });
+
+  document.getElementById(ids.hero).innerHTML = `
+    <div class="hero-card winner">
+      <div class="hero-eyebrow"><span class="hero-medal">🏆</span> Top Performer — ${eyebrowSuffix}</div>
+      <div class="hero-name">${esc(topName)}</div>
+      <div class="hero-sub">Highest average Composite Score across ${windowSpanLabel} (${scoreWindowByOwner[topName].length} snapshots)</div>
+      <div class="hero-score"><div class="n">${Math.round(windowAvg[topName])}</div><div class="l">${rollingDays}-Day Avg Score</div></div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="v">${Math.round(scoreWindowByOwner[topName][0].score)} → ${Math.round(scoreWindowByOwner[topName][scoreWindowByOwner[topName].length-1].score)}</div><div class="k">First → latest</div></div>
+        <div class="hero-stat"><div class="v">#1</div><div class="k">Current rank</div></div>
+      </div>
+    </div>
+    <div class="hero-card improved">
+      <div class="hero-eyebrow"><span class="hero-medal">🚀</span> Biggest Climb — ${eyebrowSuffix}</div>
+      <div class="hero-name">${esc(improvedEntry.nm)}</div>
+      <div class="hero-sub">Largest score gain from the window's first snapshot to now</div>
+      <div class="hero-score"><div class="n" style="color:${improvedEntry.d>=0?'var(--mcgreen-dark)':'var(--red)'}">${improvedEntry.d>0?'+':''}${improvedEntry.d.toFixed(0)}</div><div class="l">Score change</div></div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="v">${Math.round(scoreWindowByOwner[improvedEntry.nm][0].score)} → ${Math.round(scoreWindowByOwner[improvedEntry.nm][scoreWindowByOwner[improvedEntry.nm].length-1].score)}</div><div class="k">${windowSpanLabel}</div></div>
+        <div class="hero-stat"><div class="v">${Math.round(windowAvg[improvedEntry.nm])}</div><div class="k">${rollingDays}-day avg</div></div>
+      </div>
+    </div>`;
+
+  document.getElementById(ids.lbHint).textContent = `Avg weekly Composite Score · ${kpiWindow.length} snapshot${kpiWindow.length===1?'':'s'} in the last ${rollingDays} days`;
+
+  if (ids.lbHead) {
+    const lbWeeks = scoreWindowByOwner[ranked[0]].map(e=>e.week);
+    document.getElementById(ids.lbHead).innerHTML =
+      `<th>#</th><th>Owner</th><th>${rollingDays}-Day Avg</th>` + lbWeeks.map(w=>`<th>${w}</th>`).join('') + `<th>Trajectory</th><th class="r">${rollingDays}-Day Δ</th>`;
+    document.querySelector(`#${ids.lbTbl} tbody`).innerHTML = ranked.map((nm,i) => {
+      const s = scoreWindowByOwner[nm].map(e=>e.score);
+      const d = s[s.length-1]-s[0];
+      const dCls = d>0.05?'up':d<-0.05?'down':'flat';
+      const cells = s.map(v=>`<td class="mono" style="color:var(--text3)">${Math.round(v)}</td>`).join('');
+      return `<tr>
+        <td><span class="rank-num ${i===0?'r1':''}">${i+1}</span></td>
+        <td><b>${esc(nm)}</b>${i===0?'<span class="crown">30-Day MVP</span>':''}</td>
+        <td><div class="score-cell"><div class="score-bar"><div style="width:${windowAvg[nm]/Math.max(...Object.values(windowAvg))*100}%"></div></div><div class="score-val">${Math.round(windowAvg[nm])}</div></div></td>
+        ${cells}
+        <td class="spark-cell">${trendSparkline(s)}</td>
+        <td class="r"><span class="delta ${dCls}">${d>0?'+':''}${d.toFixed(1)}</span></td>
+      </tr>`;
+    }).join('');
+    document.getElementById(ids.note).innerHTML = `<b>How the rolling recap works.</b> Every week this tab looks back ${rollingDays} days from today and pulls in whichever weekly snapshots fall in that window — currently ${windowSpanLabel} — dropping anything older automatically. Trends compare the window's oldest snapshot to today; arrows are green when the move is good for facilities health (lower aging, fewer flagged) and red when it isn't, with Open Count shown neutral since more work isn't inherently good or bad. <b>Top Performer</b> is the highest average weekly Composite Score across the window — rewarding consistency over a single strong week — while <b>Biggest Climb</b> is the largest first-to-last gain within it. Owners under ${MIN_WO_COUNT} open WOs in a given week are excluded from that week's score.`;
+  } else {
+    document.querySelector(`#${ids.lbTbl} tbody`).innerHTML = ranked.map((nm,i) => {
+      const s = scoreWindowByOwner[nm].map(e=>e.score);
+      const d = s[s.length-1]-s[0];
+      const dCls = d>0.05?'up':d<-0.05?'down':'flat';
+      return `<tr>
+        <td><span class="rank-num ${i===0?'r1':''}">${i+1}</span></td>
+        <td><b>${esc(nm)}</b>${i===0?'<span class="crown">90-Day Leader</span>':''}</td>
+        <td><div class="score-cell"><div class="score-bar"><div style="width:${windowAvg[nm]/Math.max(...Object.values(windowAvg))*100}%"></div></div><div class="score-val">${Math.round(windowAvg[nm])}</div></div></td>
+        <td class="mono">${Math.round(s[0])} → ${Math.round(s[s.length-1])}</td>
+        <td class="spark-cell">${trendSparkline(s)}</td>
+        <td class="r"><span class="delta ${dCls}">${d>0?'+':''}${d.toFixed(1)}</span></td>
+      </tr>`;
+    }).join('');
+    document.getElementById(ids.note).innerHTML = `<b>How the 90-day trend works.</b> Same mechanics as the 30-day tab, just a wider window — built to show whether the team is actually improving over the quarter rather than reacting to any single strong or rough week. Trends compare the window's oldest snapshot to today. <b>Top Performer</b> rewards sustained consistency across every available snapshot in the window; <b>Biggest Climb</b> is the largest first-to-last gain over the same span. As more weeks are added, anything older than ${rollingDays} days drops off automatically — no manual pruning needed.`;
+  }
+}
+
+renderRollingTab(30, { intro:'recapIntro', trends:'recapTrends', hero:'recapHero', lbHint:'recapLbHint', lbHead:'monthLbHead', lbTbl:'monthLbTbl', note:'recapNote' }, 'Last 30 Days');
+renderRollingTab(90, { intro:'trend90Intro', trends:'trend90Trends', hero:'trend90Hero', lbHint:'trend90LbHint', lbTbl:'trend90LbTbl', note:'trend90Note' }, 'Last 90 Days');
 
 </script>
 </body>
