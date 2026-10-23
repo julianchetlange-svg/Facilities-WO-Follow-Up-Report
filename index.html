@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Facilities WO Dashboard — McCoy's</title>
+<link rel="icon" type="image/png" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -29,7 +30,7 @@ body{min-height:100vh}
 /* TOP BAR */
 .topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 28px;border-bottom:3px solid var(--mcyellow);background:linear-gradient(135deg,var(--mcgreen-dark),var(--mcgreen));position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(15,81,50,.15)}
 .topbar .logo{display:flex;align-items:center;gap:10px}
-.topbar .mark{width:30px;height:30px;background:var(--mcyellow);border-radius:6px;display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:var(--mcgreen-dark)}
+.topbar .mark{height:34px;width:auto;border-radius:4px;display:block;object-fit:contain}
 .topbar .title{font-weight:600;font-size:15px;letter-spacing:-.02em;color:#fff}
 .topbar .title span{color:rgba(255,255,255,.65);font-weight:400;margin-left:6px;font-size:13px}
 .topbar .meta{display:flex;gap:18px;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.6);letter-spacing:.02em}
@@ -238,7 +239,7 @@ tbody tr:last-child td{border-bottom:none}
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="logo">
-    <div class="mark">M</div>
+    <img class="mark" src="logo.png" alt="McCoy's Building Supply">
     <div class="title">Facilities WO Dashboard — 10/19/2026<span>McCoy's Building Supply</span></div>
   </div>
   <div class="meta">
